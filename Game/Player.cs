@@ -20,13 +20,28 @@ class Player : Unit
             case ConsoleKey.W:
                 MoveUp();
                 break;
+            case ConsoleKey.UpArrow:
+                MoveUp();
+                break;
+
             case ConsoleKey.S:
                 MoveDown();
                 break;
+            case ConsoleKey.DownArrow:
+                MoveDown();
+                break;
+
             case ConsoleKey.D:
                 MoveRight();
                 break;
+            case ConsoleKey.RightArrow:
+                MoveRight();
+                break;
+
             case ConsoleKey.A:
+                MoveLeft();
+                break;
+            case ConsoleKey.LeftArrow:
                 MoveLeft();
                 break;
         }
