@@ -15,7 +15,20 @@ class Player : Unit
 
     public void Move()
     {
-        var Key=Console.ReadKey().Key;
-        Console.WriteLine(Key.GetTypeCode());
+        switch(Console.ReadKey(true).Key)
+        {
+            case ConsoleKey.W:
+                MoveUp();
+                break;
+            case ConsoleKey.S:
+                MoveDown();
+                break;
+            case ConsoleKey.D:
+                MoveRight();
+                break;
+            case ConsoleKey.A:
+                MoveLeft();
+                break;
+        }
     }
 }

@@ -17,6 +17,7 @@ class Unit
     public virtual void MoveUp()
     {
         if (position.y+1 < ConsoleGraphic.Height) ++position.y;
+        //Console.Write()
     }
     public virtual void MoveDown()
     {

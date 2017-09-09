@@ -9,7 +9,7 @@ class ConsoleGraphic
     char[,] inf;
     public static int Length { get; private set; }
     public static int Height { get; private set; }
-    public static int Indent=1;
+    public static int Indent=18;
     char freePlaceSym;
 
     public ConsoleGraphic(int length,int height,int indent=20)

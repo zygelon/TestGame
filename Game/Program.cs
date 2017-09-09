@@ -9,12 +9,11 @@ class Program
 {
     static void Main()
     {
-        ConsoleGraphic camera=new ConsoleGraphic(10,10,1);
+        ConsoleGraphic camera=new ConsoleGraphic(10,10);
         Player me = new Player();
         while (true)
         {
             camera.Show();
-            me.MoveUp();
             me.Move();
         }
     }
