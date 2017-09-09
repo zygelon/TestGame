@@ -7,15 +7,16 @@ using System.Threading.Tasks;
 class ConsoleGraphic
 {
     char[,] inf;
-    public int Length { get; private set; }
-    public int Height { get; private set; }
+    public static int Length { get; private set; }
+    public static int Height { get; private set; }
+    public static int indent;
     char freePlaceSym;
 
     public ConsoleGraphic(int length,int height)
     {
         freePlaceSym = '.';
-        this.Length = length;
-        this.Height = height;
+        Length = length;
+        Height = height;
         inf = new char[height, length];
     }
     
@@ -34,6 +35,7 @@ class ConsoleGraphic
                 Console.Write(inf[i, j] + " ");
             Console.WriteLine();
         }
+        MakeIndent();
     }
     private void SetFreePlaceToInf()//Заполняет пустые места на массиве сиволом freePlaceSym
     {
@@ -45,5 +47,10 @@ class ConsoleGraphic
     {
         for (int i = 0; i < Coordinate.Lenght; ++i)
             inf[Coordinate.GetObject(i).y, Coordinate.GetObject(i).x] = Coordinate.GetObject(i).Symbol;
+    }
+    private void MakeIndent()
+    {
+        for (int i = 0; i < indent; ++i)
+            Console.WriteLine();
     }
 }

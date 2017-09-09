@@ -16,6 +16,6 @@ class Unit
 
     public virtual void MoveUp()
     {
-        
+        if (position.y < ConsoleGraphic.Height) ++position.y;
     }
 }
