@@ -13,5 +13,4 @@ class Player : Unit
     public Player(int x,int y) : base(new Coordinate(x, y, _PlayerSymbol_), _PlayerHP_) { }
     public Player() : base(new Coordinate(_startPosX_, _startPos_Y, _PlayerSymbol_),_PlayerHP_) { }
 
-
 }
