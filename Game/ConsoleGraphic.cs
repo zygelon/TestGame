@@ -9,11 +9,12 @@ class ConsoleGraphic
     char[,] inf;
     public static int Length { get; private set; }
     public static int Height { get; private set; }
-    public static int indent;
+    public static int Indent=1;
     char freePlaceSym;
 
-    public ConsoleGraphic(int length,int height)
+    public ConsoleGraphic(int length,int height,int indent=20)
     {
+        Indent = indent;
         freePlaceSym = '.';
         Length = length;
         Height = height;
@@ -22,8 +23,8 @@ class ConsoleGraphic
     
     public void Show()
     {
+        CleanInf();
         SetCoordinatesToInf();
-        SetFreePlaceToInf();
         OutputToDisplay();
     }
 
@@ -37,12 +38,6 @@ class ConsoleGraphic
         }
         MakeIndent();
     }
-    private void SetFreePlaceToInf()//Заполняет пустые места на массиве сиволом freePlaceSym
-    {
-        for (int i = 0; i < Height; ++i)
-            for (int j = 0; j < Length; ++j)
-                if (inf[i, j] == (char)0) inf[i, j] = freePlaceSym;
-    }
     private void SetCoordinatesToInf()//Заполняет массив inf игровыми объектами
     {
         for (int i = 0; i < Coordinate.Lenght; ++i)
@@ -50,7 +45,14 @@ class ConsoleGraphic
     }
     private void MakeIndent()
     {
-        for (int i = 0; i < indent; ++i)
+        for (int i = 0; i < Indent; ++i)
             Console.WriteLine();
+    }
+
+    private void CleanInf()
+    {
+        for (int i = 0; i < Height; ++i)
+            for (int j = 0; j < Length; ++j)
+                inf[i, j] = freePlaceSym;
     }
 }

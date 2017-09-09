@@ -9,14 +9,13 @@ class Program
 {
     static void Main()
     {
-        ConsoleGraphic a=new ConsoleGraphic(10,10);
-        Player al = new Player();
+        ConsoleGraphic camera=new ConsoleGraphic(10,10,1);
+        Player me = new Player();
         while (true)
         {
-            a.Show();
-            al.MoveUp();
-            Coordinate.DebugCoordinateObjects();
-            Console.ReadKey();
+            camera.Show();
+            me.MoveUp();
+            me.Move();
         }
     }
 }

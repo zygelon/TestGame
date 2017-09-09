@@ -29,7 +29,7 @@ class Coordinate
     {
         Console.WriteLine("Coordinate Objects:");
         for(int i=0;i<Lenght;++i)
-            Console.Write("X="+GetObject(i)+" Y="+GetObject(i)+" Symbol="+GetObject(i)+'\n');
-        Console.WriteLine(".");
+            Console.Write("X="+GetObject(i).x+" Y="+GetObject(i).y+" Symbol="+GetObject(i).Symbol+'\n');
+        Console.WriteLine();
     }
 }

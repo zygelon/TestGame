@@ -10,12 +10,24 @@ class Unit
     Coordinate position;
     protected Unit(Coordinate pos,int hp)
     {
-        position = new Coordinate(pos.x, pos.y, pos.Symbol);
+        position = pos;
         this.hp = hp;
     }
 
     public virtual void MoveUp()
     {
-        if (position.y < ConsoleGraphic.Height) ++position.y;
+        if (position.y+1 < ConsoleGraphic.Height) ++position.y;
+    }
+    public virtual void MoveDown()
+    {
+        if (position.y - 1 >= 0) --position.y;
+    }
+    public virtual void MoveRight()
+    {
+        if (position.x + 1 < ConsoleGraphic.Length) ++position.x;
+    }
+    public virtual void MoveLeft()
+    {
+        if (position.x - 1 >= 0) --position.x;
     }
 }
