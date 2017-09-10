@@ -9,7 +9,7 @@ class Program
 {
     static void Main()
     {
-        ConsoleGraphic camera=new ConsoleGraphic(10,10);
+        ConsoleGraphic camera=new ConsoleGraphic(10,10,19);
         Player me = new Player();
         while (true)
         {

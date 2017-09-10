@@ -15,7 +15,6 @@ class Coordinate
     {
         return Objects[index];
     }
-
     public int x, y;
     public char Symbol { get;private set; }
     public Coordinate(int x,int y,char symbol)
