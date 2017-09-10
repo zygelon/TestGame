@@ -4,19 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-class Unit
+class Unit : BaseObject
 {
     int hp;
-    Coordinate position;
-    protected Unit(Coordinate pos,int hp)
-    {
-        position = pos;
-        this.hp = hp;
-    }
+    protected Unit(Coordinate pos, int hp) : base(pos) { this.hp = hp; }
 
     public virtual void MoveUp()
     {
-        if (position.y+1 < ConsoleGraphic.Height) ++position.y;
+        if (position.y+1 < ConsoleGraphic.Columns) ++position.y;
     }
     public virtual void MoveDown()
     {
@@ -24,7 +19,7 @@ class Unit
     }
     public virtual void MoveRight()
     {
-        if (position.x + 1 < ConsoleGraphic.Length) ++position.x;
+        if (position.x + 1 < ConsoleGraphic.Rows) ++position.x;
     }
     public virtual void MoveLeft()
     {

@@ -11,9 +11,11 @@ class Program
     {
         ConsoleGraphic camera=new ConsoleGraphic(10,10,19);
         Player me = new Player();
+        new Wall(3, 3);
         while (true)
         {
             camera.Show();
+            Coordinate.DebugCoordinateObjects();
             me.Move();
         }
     }

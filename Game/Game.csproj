@@ -37,9 +37,13 @@
   <ItemGroup>
     <Compile Include="ConsoleGraphic.cs" />
     <Compile Include="Coordinate.cs" />
+    <Compile Include="IControlInf.cs" />
+    <Compile Include="Object.cs" />
+    <Compile Include="ObjectsInformation.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Unit.cs" />
+    <Compile Include="Wall.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -4,30 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-class Coordinate
+class Coordinate : ObjectsInformation
 {
-    private static List<Coordinate> Objects = new List<Coordinate>();
-    public static int Lenght
-    {
-        get{ return Objects.Count; }
-    }
-    public static Coordinate GetObject(int index)
-    {
-        return Objects[index];
-    }
     public int x, y;
     public char Symbol { get;private set; }
-    public Coordinate(int x,int y,char symbol)
+    public Coordinate(int x,int y,char symbol) : base()
     {
         this.x = x;
         this.y = y;
         this.Symbol = symbol;
-        Objects.Add(this);
+        Objects
     }
     public static void DebugCoordinateObjects()
     {
+        Console.WriteLine("Count Objects=" + Length);
         Console.WriteLine("Coordinate Objects:");
-        for(int i=0;i<Lenght;++i)
+        for(int i=0;i<Length;++i)
             Console.Write("X="+GetObject(i).x+" Y="+GetObject(i).y+" Symbol="+GetObject(i).Symbol+'\n');
         Console.WriteLine();
     }
